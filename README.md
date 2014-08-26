@@ -22,7 +22,7 @@ A couple CSS filter combinations to get you started.
 
 ## Available filters
 
-data-filter names
+`data-filter` names
 
 - Eureka
 - Karl
