@@ -4,6 +4,7 @@ filter.css
 A couple CSS filter combinations to get you started.
 
 
+
 ## Usage
 
 1. Link to the `filter.css` file.
@@ -18,15 +19,23 @@ A couple CSS filter combinations to get you started.
 ```
 
 
+
 ## Available filters
 
-data-filter  | Description
-------------- | -------------
-Eureka  | 
-Karl    | 
-Karl    | 
-Karl    | 
-Karl    | 
+data-filter names
+
+- Eureka
+- Karl
+- Rocky
+- London
+- FlipFlop
+- Introvert
+- Butterfly
+- Gold
+- Copper
+- Silver
+- Night
+- LoFi
 
 
 
