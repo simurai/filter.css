@@ -1,0 +1,44 @@
+
+/* filter.css
+ * https://github.com/simurai/filter.css
+ * -------------------------------------
+ */
+
+
+
+/* Transition --------------------------------- */
+
+[data-filter] {
+    transition: -webkit-filter .2s;
+}
+
+
+/* Default --------------------------------- */
+
+[data-filter="Default"] {
+    -webkit-filter:
+        brightness(100%)
+        contrast(100%)
+        grayscale(0%)
+        hue-rotate(0deg)
+        invert(0%)
+        saturate(100%)
+        sepia(0%)
+    ;
+}
+
+
+/* Filters --------------------------------- */
+
+[data-filter="Eureka"]      { -webkit-filter: brightness(160%) contrast(110%) grayscale(  0%) hue-rotate(  0deg) invert(10%) saturate( 90%) sepia(  0%); }
+[data-filter="Karl"]        { -webkit-filter: brightness(110%) contrast(240%) grayscale(100%) hue-rotate(  0deg) invert(32%) saturate(  0%) sepia( 11%); }
+[data-filter="Rocky"]       { -webkit-filter: brightness(130%) contrast(140%) grayscale(  0%) hue-rotate(  0deg) invert( 7%) saturate( 50%) sepia(  0%); }
+[data-filter="London"]      { -webkit-filter: brightness(130%) contrast( 80%) grayscale( 90%) hue-rotate(  0deg) invert( 0%) saturate(100%) sepia(  0%); }
+[data-filter="FlipFlop"]    { -webkit-filter: brightness(130%) contrast(110%) grayscale(  0%) hue-rotate(180deg) invert( 0%) saturate(200%) sepia(  0%); }
+[data-filter="Introvert"]   { -webkit-filter: brightness(110%) contrast(120%) grayscale(  0%) hue-rotate(  0deg) invert(90%) saturate( 70%) sepia( 30%); }
+[data-filter="Butterfly"]   { -webkit-filter: brightness(130%) contrast(120%) grayscale(  0%) hue-rotate(  0deg) invert(10%) saturate(180%) sepia(  0%); }
+[data-filter="Gold"]        { -webkit-filter: brightness(120%) contrast(120%) grayscale(  0%) hue-rotate(  0deg) invert( 0%) saturate(100%) sepia(100%); }
+[data-filter="Copper"]      { -webkit-filter: brightness(240%) contrast( 80%) grayscale(  0%) hue-rotate(  0deg) invert(30%) saturate(100%) sepia(100%); }
+[data-filter="Silver"]      { -webkit-filter: brightness(190%) contrast(160%) grayscale(  0%) hue-rotate(  0deg) invert(20%) saturate(  0%) sepia(  0%); }
+[data-filter="Night"]       { -webkit-filter: brightness( 50%) contrast(170%) grayscale(  0%) hue-rotate(  0deg) invert(13%) saturate( 10%) sepia( 20%); }
+[data-filter="LoFi"]        { -webkit-filter: brightness(150%) contrast(999%) grayscale( 60%) hue-rotate(  0deg) invert(23%) saturate(100%) sepia( 20%); }
