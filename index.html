@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>filter.css</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Filter">
+    <meta name="mobile-web-app-capable" content="yes">
+        
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="filter.css">
+</head>
+<body id="app">
+    
+    <div class="Support">Note: Looks like your browser doesn't support <a href="http://caniuse.com/#search=CSS filter">CSS filters</a> that are used in this demo.</div>
+    
+    <header class="Header">
+        <h1 class="Header-title">filter.css</h1>
+        <h2 class="Header-subtitle">A couple CSS filter combinations to get you started.</h2>
+    </header>
+    
+    <main class="Gallery">
+        <div class="Gallery-item" v-repeat="photos" v-on="click:onPhoto(this, $index)" style="background-image: url( {{src}} );"></div>
+    </main>
+    
+    <aside id="filter" class="Filter" v-cloak>
+        <div class="Filter-item" v-repeat="filters" v-on="click:onFilter(this, $index)">
+            <div class="Filter-thumb" data-filter="{{filter}}" style="transition-delay: {{($index*0.05)}}s"></div>
+            <label class="Filter-label">{{label}}</label>
+        </div>        
+    </aside>
+    
+    <footer class="Footer">
+        <a class="GitHub" href="https://github.com/simurai/filter.css">Get'em on GitHub</a>
+    </footer>
+    
+    <script src="vue.min.js"></script>
+    <script src="fastclick.js"></script>    
+    <script src="app.js"></script>
+</body>
+</html>

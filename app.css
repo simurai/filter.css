@@ -1,0 +1,195 @@
+
+/* filter.css
+ * https://github.com/simurai/filter.css
+ * -------------------------------------
+ */
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; /* Spacing of components */
+    font-family: Avenir, sans-serif;
+    text-align: center;
+    color: hsl(0, 0%, 60%);
+    background: hsl(0, 0%, 20%);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 10vw;
+    font-size: 16px; /* Sizing of components */
+}
+
+a {
+    color: inherit;
+}
+
+[v-cloak] {
+    visibility: hidden;
+}
+
+.Support {
+    display: none;
+}
+@supports not ( -webkit-filter:sepia() ) {
+	.Support {
+	    display: block;
+	    padding: 1rem;
+	    color: white;
+	    background: hsl(0, 50%, 50%);
+	}
+}
+
+
+
+/* Intro --------------------------------- */
+
+.Gallery,
+.Filter {
+    -webkit-animation: Filter-intro .4s .2s cubic-bezier(0, .20, 0, 1) backwards;
+            animation: Filter-intro .4s .2s cubic-bezier(0, .20, 0, 1) backwards;
+}
+.Filter { 
+    -webkit-animation-delay: .4s;
+            animation-delay: .4s;
+}
+@-webkit-keyframes Filter-intro { 0% { opacity: 0; -webkit-transform: translateY(-20px); transform: translateY(-20px); } }
+        @keyframes Filter-intro { 0% { opacity: 0; -webkit-transform: translateY(-20px); transform: translateY(-20px); } }
+
+
+/* Header --------------------------------- */
+
+.Header {
+    text-align: center;
+    margin: 0 0 10vw 0;
+}
+
+.Header-title {
+    font-weight: normal;
+    font-size: 5em;
+    margin: 0;
+}
+
+.Header-subtitle {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+
+/* Gallery --------------------------------- */
+
+.Gallery {
+    padding: .5rem;
+}
+
+.Gallery-item {
+    display: inline-block;
+    width: 20vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: .5rem;
+}
+@media (max-width: 800px) {
+    .Gallery-item:nth-child(1) {
+        width: 50vw;
+        height: 50vw;
+    }
+    .Gallery-item:nth-child(2),
+    .Gallery-item:nth-child(3) {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .Gallery-item:nth-child(1) {
+        display: none;
+    }
+}
+
+
+/* Filter --------------------------------- */
+
+.Filter {   
+    padding: .5rem;
+}
+
+.Filter-item {
+    display: inline-block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    margin: 1rem .5rem;
+    border-radius: 6px;
+    box-shadow: 0 10px 10px -10px hsla(0, 0%, 0%, 0.5);
+    background: hsl(0, 0%, 24%);
+    color: hsl(0, 0%, 60%);
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid hsl(0, 0%, 12%);
+    transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.20, 0, 0, 1);
+}
+.Filter-item:active {
+    opacity: 0.5;
+    -webkit-transform: scale(.9);
+            transform: scale(.9);
+    transition-duration: .1s;
+}
+.Filter-item.is-selected {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem); 
+}
+.Filter-item.is-selected:active {
+    -webkit-transform: translateY(-1rem) scale(.9);
+            transform: translateY(-1rem) scale(.9);
+}
+
+.Filter-thumb {
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background: url(photo-1.jpg) no-repeat center;
+    background-size: 60px;
+}
+
+#app[data-photo="2"] .Filter-thumb { background-image: url(photo-2.jpg); }
+#app[data-photo="3"] .Filter-thumb { background-image: url(photo-3.jpg); }
+
+.Filter-thumb[data-filter] {
+    transition: background-image .4s;
+}
+
+.Filter-label {
+    display: block;
+    text-align: center;
+    border-radius: 0 0 inherit inherit;
+    font-size: .8em;
+    line-height: 1.75;
+    border-top: 1px solid hsl(0, 0%, 18%);
+}
+
+
+/* Footer --------------------------------- */
+
+.Footer {
+    margin-top: 10vw;
+}
+
+.GitHub {
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid;
+    padding: 0.8em 1.2em;
+    font-size: 1.2em;
+}
