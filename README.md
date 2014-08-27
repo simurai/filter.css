@@ -3,6 +3,7 @@ filter.css
 
 A couple CSS filter combinations to get you started.
 
+![ScreenShot](ScreenShot.png)
 
 
 ## Usage
