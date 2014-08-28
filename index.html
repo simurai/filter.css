@@ -12,6 +12,7 @@
         
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="filter.css">
+    <link href='http://fonts.googleapis.com/css?family=Qwigley&text=filter.css' rel='stylesheet' type='text/css'>
 </head>
 <body id="app">
     
@@ -19,8 +20,15 @@
     
     <header class="Header">
         <h1 class="Header-title">filter.css</h1>
-        <h2 class="Header-subtitle">A couple CSS filter combinations to get you started.</h2>
+        <h2 class="Header-subtitle">A couple CSS filter combinations to get you started</h2>
     </header>
+    
+    <aside id="filter" class="Filter" v-cloak>
+        <div class="Filter-item" v-repeat="filters" v-on="click:onFilter(this, $index)">
+            <div class="Filter-thumb" data-filter="{{filter}}" style="transition-delay: {{($index*0.05)}}s;"></div>
+            <label class="Filter-label">{{label}}</label>
+        </div>        
+    </aside>
     
     <main class="Gallery">
         <div class="Gallery-item" v-repeat="photos" v-on="click:onPhoto(this, $index)" style="background-image: url( {{src}} ); transition-delay: {{($index*0.05)}}s;"></div>
@@ -32,12 +40,8 @@
         --><span class="Code-end">;</span>
     </code>
     
-    <aside id="filter" class="Filter" v-cloak>
-        <div class="Filter-item" v-repeat="filters" v-on="click:onFilter(this, $index)">
-            <div class="Filter-thumb" data-filter="{{filter}}" style="transition-delay: {{($index*0.05)}}s;"></div>
-            <label class="Filter-label">{{label}}</label>
-        </div>        
-    </aside>
+    <p class="Note">You might still need to add vendor prefixes. See on <a href="http://caniuse.com/#search=CSS filter">caniuse</a>.</p>
+    
     
     <footer class="Footer">
         <a class="GitHub" href="https://github.com/simurai/filter.css">Get'em on GitHub</a>
