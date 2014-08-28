@@ -5,6 +5,7 @@ A couple CSS filter combinations to get you started.
 
 ![ScreenShot](ScreenShot.png)
 
+> See [live demo](http://simurai.com/filter.css/)
 
 ## Usage
 
