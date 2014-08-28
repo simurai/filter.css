@@ -40,7 +40,9 @@ A couple CSS filter combinations to get you started.
   - LoFi
 
 
-Or you can just grab individual filter styles on the [demo page](http://simurai.com/filter.css/) and use it in your own CSS file.
+Or you can just grab __individual filter__ styles on the [demo page](http://simurai.com/filter.css/) and use it in your own CSS file.
+
+Also feel free to __tweak the numbers__ to better match your image/content.
 
 
 ## Browser support
