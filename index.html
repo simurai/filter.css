@@ -23,12 +23,12 @@
     </header>
     
     <main class="Gallery">
-        <div class="Gallery-item" v-repeat="photos" v-on="click:onPhoto(this, $index)" style="background-image: url( {{src}} );"></div>
+        <div class="Gallery-item" v-repeat="photos" v-on="click:onPhoto(this, $index)" style="background-image: url( {{src}} ); transition-delay: {{($index*0.05)}}s;"></div>
     </main>
     
     <aside id="filter" class="Filter" v-cloak>
         <div class="Filter-item" v-repeat="filters" v-on="click:onFilter(this, $index)">
-            <div class="Filter-thumb" data-filter="{{filter}}" style="transition-delay: {{($index*0.05)}}s"></div>
+            <div class="Filter-thumb" data-filter="{{filter}}" style="transition-delay: {{($index*0.05)}}s;"></div>
             <label class="Filter-label">{{label}}</label>
         </div>        
     </aside>
