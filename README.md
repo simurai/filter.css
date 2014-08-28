@@ -24,25 +24,23 @@ A couple CSS filter combinations to get you started.
   <div data-filter="Eureka"></div>
   ```
 
+  List of available `data-filter` names.
+  
+  - Eureka
+  - Karl
+  - Rocky
+  - London
+  - FlipFlop
+  - Introvert
+  - Butterfly
+  - Gold
+  - Copper
+  - Silver
+  - Night
+  - LoFi
 
 
-### Available filters
-
-List of all `data-filter` names.
-
-- Eureka
-- Karl
-- Rocky
-- London
-- FlipFlop
-- Introvert
-- Butterfly
-- Gold
-- Copper
-- Silver
-- Night
-- LoFi
-
+Or you can just grab individual filter styles on the [demo page](http://simurai.com/filter.css/) and use it in your own CSS file.
 
 
 ## Browser support
