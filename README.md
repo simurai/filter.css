@@ -11,19 +11,22 @@ A couple CSS filter combinations to get you started.
 
 1. Add the [filter.css](https://github.com/simurai/filter.css/blob/master/filter.css) file to your project.
 2. Link to the `filter.css` file.
+
+  ```html
+  <!-- In your <head> -->
+  <link rel="stylesheet" href="filter.css">
+  ```
+
 3. Use a `data-filter` attribute in your markup to add a filter.
 
-```html
-<!-- In your <head> -->
-<link rel="stylesheet" href="filter.css">
-
-<!-- In your <body> -->
-<div data-filter="Eureka"></div>
-```
+  ```html
+  <!-- In your <body> -->
+  <div data-filter="Eureka"></div>
+  ```
 
 
 
-## Available filters
+### Available filters
 
 List of all `data-filter` names.
 
