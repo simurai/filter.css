@@ -9,8 +9,9 @@ A couple CSS filter combinations to get you started.
 
 ## Usage
 
-1. Link to the `filter.css` file.
-2. Use a `data-filter` attribute in your markup to add a filter.
+1. Add the [filter.css](https://github.com/simurai/filter.css/blob/master/filter.css) file to your project.
+2. Link to the `filter.css` file.
+3. Use a `data-filter` attribute in your markup to add a filter.
 
 ```html
 <!-- In your <head> -->
@@ -24,7 +25,7 @@ A couple CSS filter combinations to get you started.
 
 ## Available filters
 
-`data-filter` names
+List of all `data-filter` names.
 
 - Eureka
 - Karl
