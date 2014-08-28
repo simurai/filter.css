@@ -15,10 +15,9 @@ html {
     text-align: center;
     color: hsl(0, 0%, 60%);
     background: hsl(0, 0%, 20%);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+       
+        
+            
 }
 
 body {
@@ -52,16 +51,15 @@ a {
 /* Intro --------------------------------- */
 
 .Gallery,
+.Code,
 .Filter {
-    -webkit-animation: Filter-intro .4s .2s cubic-bezier(0, .20, 0, 1) backwards;
-            animation: Filter-intro .4s .2s cubic-bezier(0, .20, 0, 1) backwards;
+    -webkit-animation: intro .4s .2s cubic-bezier(0, .20, 0, 1) backwards;
+            animation: intro .4s .2s cubic-bezier(0, .20, 0, 1) backwards;
 }
-.Filter { 
-    -webkit-animation-delay: .4s;
-            animation-delay: .4s;
-}
-@-webkit-keyframes Filter-intro { 0% { opacity: 0; -webkit-transform: translateY(-20px); transform: translateY(-20px); } }
-        @keyframes Filter-intro { 0% { opacity: 0; -webkit-transform: translateY(-20px); transform: translateY(-20px); } }
+.Code {  -webkit-animation-delay: .3s; animation-delay: .3s; }
+.Filter {  -webkit-animation-delay: .4s; animation-delay: .4s; }
+@-webkit-keyframes intro { 0% { opacity: 0; -webkit-transform: translateY(-20px); transform: translateY(-20px); } }
+        @keyframes intro { 0% { opacity: 0; -webkit-transform: translateY(-20px); transform: translateY(-20px); } }
 
 
 /* Header --------------------------------- */
@@ -86,7 +84,7 @@ a {
 /* Gallery --------------------------------- */
 
 .Gallery {
-    padding: .5rem;
+    padding: 1rem .5rem;
 }
 
 .Gallery-item {
@@ -96,7 +94,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin: .5rem;
+    margin: 1rem .5rem;
 }
 @media (max-width: 800px) {
     .Gallery-item:nth-child(1) {
@@ -115,10 +113,41 @@ a {
 }
 
 
+
+/* Code --------------------------------- */
+
+.Code {
+    background: hsla(0, 0%, 0%, 0.2);
+    padding: 1em;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    text-align: left;
+    resize: vertical;
+    height: 5.6em;
+    line-height: 1.2;
+    border: 2px solid hsl(0, 0%, 10%);
+    max-width: 33em;
+    margin: 1rem auto;
+}
+
+.Code-prop,
+.Code-end {
+    color: hsl(0, 0%, 38%);
+}
+
+.Code-value {
+    
+}
+
+
 /* Filter --------------------------------- */
 
 .Filter {   
-    padding: .5rem;
+    padding: 1rem .5rem;
+    max-width: 36em;
+    margin: 0 auto;
 }
 
 .Filter-item {

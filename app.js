@@ -3,6 +3,7 @@
 // More info: http://simurai.com/blog/2014/07/20/filtering-filters/
 
 var el_app = document.getElementById('app');
+var el_code = document.getElementById('code');
 var currentFilter;
 
 FastClick.attach(document.body);
@@ -36,14 +37,19 @@ var app = new Vue({
     },
         
     methods: {
+        setFilterValue: function (_el) {
+        	setTimeout(function(){
+        	  var _filter = window.getComputedStyle(_el).webkitFilter;
+        	  el_code.innerHTML = _filter;
+        	},300);
+        },
         
         setFilter: function (filter) {
-            
             var el_photos = document.querySelectorAll('.Gallery-item');
             for (var i = 0; i < el_photos.length; i++) {
                 el_photos[i].setAttribute('data-filter', filter );
             }
-            
+            this.setFilterValue( el_photos[0]);
         },
 
         onFilter: function (el_filter, index) {

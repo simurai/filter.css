@@ -26,6 +26,12 @@
         <div class="Gallery-item" v-repeat="photos" v-on="click:onPhoto(this, $index)" style="background-image: url( {{src}} ); transition-delay: {{($index*0.05)}}s;"></div>
     </main>
     
+    <code class="Code">
+        <span class="Code-prop" title="Might need vendor prefix">filter:</span>
+        <span id="code" class="Code-value">none</span><!--
+        --><span class="Code-end">;</span>
+    </code>
+    
     <aside id="filter" class="Filter" v-cloak>
         <div class="Filter-item" v-repeat="filters" v-on="click:onFilter(this, $index)">
             <div class="Filter-thumb" data-filter="{{filter}}" style="transition-delay: {{($index*0.05)}}s;"></div>

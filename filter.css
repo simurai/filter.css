@@ -16,15 +16,17 @@
 /* Default --------------------------------- */
 
 [data-filter="Default"] {
-    -webkit-filter:
-        brightness(100%)
-        contrast(100%)
-        grayscale(0%)
-        hue-rotate(0deg)
-        invert(0%)
-        saturate(100%)
-        sepia(0%)
-    ;
+    -webkit-filter: none;
+    
+    /*
+    brightness(100%)
+    contrast(100%)
+    grayscale(0%)
+    hue-rotate(0deg)
+    invert(0%)
+    saturate(100%)
+    sepia(0%)
+    */
 }
 
 
