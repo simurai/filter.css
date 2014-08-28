@@ -22,9 +22,16 @@ html {
 
 body {
     margin: 0; /* Remove default margin */
-    padding: 10vw;
+    padding: 1rem;
     font-size: 16px; /* Sizing of components */
 }
+@media (min-width: 500px) {
+	body {
+    	padding: 5rem 1rem;
+	}
+}
+
+
 
 a {
     color: inherit;
@@ -66,16 +73,17 @@ a {
 
 .Header {
     text-align: center;
-    margin: 0 0 10vw 0;
+    margin: 0 0 5rem 0;
+    position: relative;
 }
 
 .Header-title {
     font-weight: normal;
     font-size: 10em;
-    margin: 0;
+    margin: 1rem 0 0 0;
     font-family: 'Qwigley';
 }
-@media (max-width: 500px) {
+@media (max-width: 499px) {
 	.Header-title {
     	font-size: 30vw;
 	}
@@ -83,7 +91,15 @@ a {
 
 .Header-subtitle {
     font-weight: normal;
-    font-size: 1.5em;
+    font-size: 1.4em;
+    margin: 0;
+}
+@media (min-width: 500px) {
+	.Header-subtitle {
+    	margin: -50px 0 0 -130px;
+    	position: absolute;
+    	left: 50%;
+	}
 }
 
 
@@ -242,7 +258,7 @@ a {
 /* Footer --------------------------------- */
 
 .Footer {
-    margin-top: 10vw;
+    margin: 5rem 0;
 }
 
 .GitHub {
